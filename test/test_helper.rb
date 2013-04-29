@@ -8,8 +8,9 @@ require 'database_cleaner'
 
 
 class ActiveSupport::TestCase
+  
   setup do 
-  	DatabaeCleaner.strategy = :truncation
+  	DatabaseCleaner.strategy = :truncation
   	DatabaseCleaner.start
   end
   	

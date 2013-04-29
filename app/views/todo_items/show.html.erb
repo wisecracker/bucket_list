@@ -1,0 +1,13 @@
+<h1> My Todo Item: </h1>
+
+<div>
+	<h1><%= render @todo_item %></h1>
+</div>
+
+<div class="comments">
+	<% @todo_item.comments.each do |comment| %>
+		<%= render comment %>
+	<% end %>
+</div>
+
+<%= render :partial => 'comments/form', :locals =>  { :todo_item => @todo_item } %>
