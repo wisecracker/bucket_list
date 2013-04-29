@@ -4,10 +4,10 @@ class CommentsControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end
- 	context "a Comment"
+ 	context "a Comment" do
 	  setup do
 			@todo_item = TodoItem.create
-			post comments_path, :comment => { :body => "Blah", :to_item_id => @todo_item.id }
+			post :create, :comment => { :body => "Blah", :to_item_id => @todo_item.id }
 		end
 
 		should "increase the comment count" do
@@ -22,5 +22,5 @@ class CommentsControllerTest < ActionController::TestCase
 			assert_last_response :success
 		end
 	end
-	
+
 end
