@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 
 <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=??????????????&sensor=false">
+      src="https://maps.googleapis.com/maps/api/js?key=?????????&sensor=false">
 </script>
 
 <script type="text/javascript">
@@ -52,6 +52,7 @@
 			<div class="menu">
 					<div id="left_menu">
 						<ul>
+							<li><%= link_to 'Home(Destinations)', destinations_path %></li>
 							<li><%= link_to 'Todo Items', todo_items_path %></li>
 						</ul>
 					</div>

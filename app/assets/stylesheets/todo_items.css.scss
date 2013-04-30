@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.list_of_todo_items {
+	clear: both;
+}
 
 .todo-item {
 	border: 2px solid rgb(211, 204, 188);
