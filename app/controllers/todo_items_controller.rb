@@ -2,6 +2,7 @@ class TodoItemsController < ApplicationController
 
 
 	def index
+		# @destinations= Destination.all
 		@todo_items = TodoItem.all
 	end
 

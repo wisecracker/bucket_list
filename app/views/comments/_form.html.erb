@@ -1,9 +1,10 @@
 <div class="new-comment">
 
-	New Comment
+	
 
 	<%= form_for Comment.new(:todo_item_id => todo_item.id), :remote => true do |f| %>
-
+	New Comment:
+	
 	<%= f.hidden_field :todo_item_id %>
 
 	<div class="field">
