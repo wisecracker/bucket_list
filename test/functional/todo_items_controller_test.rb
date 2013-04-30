@@ -41,7 +41,7 @@ class TodoItemsControllerTest < ActionController::TestCase
 		context "create a new todo item" do
 			setup do
 				get :index
-				post :create, :todo_item => { :name => "todo item name", :id => 4 }
+				post :create, :todo_item => { :name => "todo item name", :completed => true }
 			end
 
 			should "gives a HTTP 2000" do
@@ -51,10 +51,16 @@ class TodoItemsControllerTest < ActionController::TestCase
 			should "increase the todo items count" do
 				assert_equal 4, TodoItem.count
 				assert_equal "todo item name", TodoItem.find(4).name
+				assert_equal true, TodoItem.find(4).completed
 			end
 
 			should 'show the newly created todo_item' do
-				assert_last_response_include?("todo item name")
+				assert_select "div.todo-item" do |elements|
+				 		assert elements.first.to_s.include?("todo item name")
+				end
+
+
+
 			end
 		end
 

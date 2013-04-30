@@ -27,6 +27,7 @@ end
 group :test do
 	gem 'shoulda'
 	gem 'database_cleaner'
+	gem 'pry'
 end
 
 gem 'jquery-rails'
