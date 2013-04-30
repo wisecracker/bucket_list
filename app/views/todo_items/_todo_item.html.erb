@@ -1,6 +1,9 @@
 <div class="todo-item <% todo_item.completed? ? 'completed' : '' %> ">
 
 	<%= todo_item.name %>
-
+	<br>
+		<%= todo_item.completed ? 'You did it' : 'Still got time for this one' %>
+	<br>
+	<br>
 </div>
 

@@ -1,5 +1,9 @@
 <h1> All things to do: </h1>
 
-<% @todo_items.each do |todo_item| %>
-	<%= render todo_item %>
-<% end %>
+<div class="todo_items">
+	<% @todo_items.each do |todo_item| %>
+		<%= render todo_item %>
+	<% end %>
+</div>
+
+<%= render :partial => 'form' %>
