@@ -11,3 +11,78 @@
  *= require_self
  *= require_tree .
  */
+
+body {
+	margin: 0px;
+	background-color: rgb(241, 240, 237);
+}
+
+.header {
+	padding:0px;
+}
+
+.menu {
+	background-color: rgb(75, 77, 90);
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+	min-width: 700px;
+	text-align: center;
+	height: 20px;
+	border-radius: 5px;
+	margin-top: 5px;
+	border: 2px solid white;
+}
+
+.menu ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.menu ul li {
+	display: inline;
+	padding: 0 10px 0 10px;
+}
+
+.menu ul li a {
+	text-decoration: none;
+	font-weight: bold;
+	color: rgb(237, 238, 243);
+}
+
+.menu ul li a:hover {
+	text-decoration: none;
+	font-weight: bold;
+	color: green;
+	color: rgb(213, 214, 199);
+}
+
+#left_menu {
+	float: left;
+	margin-left: 10px;
+}
+
+#right_menu {
+	float: right;
+	margin-right: 10px;
+	color: white;
+	font-family: arial;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+
+.container {
+	clear: both;
+}
+
+	.container #box1 {
+		background-color: rgb(221, 148, 14);
+		border: 1px solid red;
+	}
+
+	.container #box2 {
+		background-color: rgb(160, 160, 211);
+		border: 1px solid blue;
+	}
