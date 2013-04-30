@@ -10,8 +10,7 @@ class TodoItemsController < ApplicationController
 	end
 
 	def create
-		@todo_item = TodoItem.new( :name => params[:todo_item][:name],
-														   :completed => params[:todo_item][:completed] )
+		@todo_item = TodoItem.new(params[:todo_item])
 		@todo_item.save!
 		render @todo_item
 	end

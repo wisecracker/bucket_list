@@ -4,7 +4,7 @@ class TodoItem < ActiveRecord::Base
   has_many :comments
   belongs_to :destination
 
-  validates :location, :presence => true
+  validates :location, :destination_id, :presence => true
   
   geocoded_by :my_geo_method 
   after_validation :geocode

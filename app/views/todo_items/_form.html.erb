@@ -5,7 +5,18 @@
 	<%= form_for TodoItem.new, :remote => true do |f| %>
 
 		<div class="field">
+			<%= label_tag :name %>
 			<%= f.text_field :name %>
+		</div>
+
+		<div class="field">
+			<%= label_tag 'destination' %>
+			<%= f.collection_select(:destination_id, Destination.all, :id, :name, :include_blank => "Choose a Destination:") %>
+		</div>
+
+		<div class="field">
+			<%= label_tag :location %>
+			<%= f.text_field :location %>
 		</div>
 
 		<div class="field">
