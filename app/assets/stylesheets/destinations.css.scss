@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.destinations {
+	float: left;
+	border: 1px solid red;
+}
 
 .destination {
 	border: 2px solid rgb(211, 204, 188);
@@ -15,3 +19,6 @@
 	font-size: 18px;
 }
 
+.hide-me {
+	display: none;
+}

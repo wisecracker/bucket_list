@@ -7,12 +7,20 @@
   <%= csrf_meta_tags %>
 
 <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=???????????&sensor=false">
+      src="https://maps.googleapis.com/maps/api/js?key=????????&sensor=false">
 </script>
 
 <script>
 	$(function() {
 		initialize();
+
+		// to do it with json
+		// var items = <%= raw(TodoItem.all.to_json) %>
+
+		// for(item in times) {
+		// 	addMarker(item.latitude, item.logitude, item.name)
+		// }
+
 	
  	<% TodoItem.all.each do |t| %>
   	putMarkers(<%= t.latitude ? t.latitude : 0 %>, <%= t.longitude ? t.longitude : 0 %>, "<%= t.name %>");
