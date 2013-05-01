@@ -1,3 +1,16 @@
 // Place all the styles related to the destinations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.destination {
+	border: 2px solid rgb(211, 204, 188);
+	margin: 5px;
+	width: 200px;
+	height: 200px;
+	padding: 5px;
+	background-color: white;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 18px;
+}
