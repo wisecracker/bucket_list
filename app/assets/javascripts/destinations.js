@@ -9,9 +9,9 @@ $(document).ready(function() {
 				this.style.backgroundColor = '#b1c0cf';
 				var destinationId = this.dataset.itemId
 				showByDestination(destinationId);
-				// var dLat = 
-				// var dLng =
-				recenterMap(31.046051,34.851612);
+				var dLat = this.attributes.latitude.value
+				var dLng = this.attributes.longitude.value
+				recenterMap(dLat, dLng);
 				// destinationSelectCorrect(destinationId);
 				};				
 	});
