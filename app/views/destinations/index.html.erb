@@ -9,6 +9,10 @@
 	<% end %> 
 </div>
 
+<div>
+	<%= render :partial => 'todo_items/form' %>
+</div>
+
 <div class="todo_items">
 	<% @destinations.each do |destination| %>
 			<% destination.todo_items.each do |todo_item| %>

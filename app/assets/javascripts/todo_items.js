@@ -4,7 +4,9 @@
 $(document).ready(function() {
 
 	$('body').bind("ajax:success", function(e, data) {
-	  $('.list_of_todo_items').append(data);
+		$('.list_of_todo_items').append(data);
+		$('.todo_items').append(data);
+
 	  });
 });
 

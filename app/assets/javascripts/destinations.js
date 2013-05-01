@@ -1,41 +1,48 @@
 $(document).ready(function() {
 
 	
-
+	// sets each destination to be clickable
 	$('.destinations').children().each( function() {
-			console.log(this);
-
-			this.onmouseover = function() {
-    		this.style.backgroundColor = 'rgb(219, 189, 189)';
-				};
-
-			this.onmouseout = function() {
-    		this.style.backgroundColor = 'white';
-				};	
 
 			this.onclick = function() {
-				this.style.backgroundColor = 'green';
+				removeDestinationBackgrounds(); 
+				this.style.backgroundColor = '#b1c0cf';
 				var destinationId = this.dataset.itemId
 				showByDestination(destinationId);
-				};
-
+				// var dLat = 
+				// var dLng =
+				recenterMap(31.046051,34.851612);
+				// destinationSelectCorrect(destinationId);
+				};				
 	});
-
-
-	function showByDestination(id) {
-		
-		$('[class=hide-me]').each(function() {		
-				var i = this.dataset.itemId
-				
-				if (i==id){			
-						this.style.display = "inherit";
-				}	
-				else{
-					this.style.display = "none";
-				}					
-		});	
-	};
 
 });
 
+// when a destination is clicked, unhides all it's todo itmes
+function showByDestination(id) {		
+	$('[class=hide-me]').each(function() {		
+			var i = this.dataset.itemId
+			
+			if (i==id){			
+					this.style.display = "inherit";
+			}	
+			else{
+				this.style.display = "none";
+			}					
+	});	
+};
+
+
+
+//clears the backgound of all destinations
+function removeDestinationBackgrounds() {
+	$('.destinations').children().each( function() {
+		this.style.backgroundColor = 'white';
+	});
+};
+
+// makes the destination selection show the current selected destination
+function destinationSelectCorrect(id) {
+
+};	
 

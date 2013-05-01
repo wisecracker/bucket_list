@@ -9,9 +9,11 @@
 			<%= f.text_field :name %>
 		</div>
 
-		<div class="field">
-			<%= label_tag 'destination' %>
-			<%= f.collection_select(:destination_id, Destination.all, :id, :name, :include_blank => "Choose a Destination:") %>
+		<div id="destination-select">
+			<div class="field">
+				<%= label_tag 'destination' %>
+				<%= f.collection_select(:destination_id, Destination.all, :id, :name, :include_blank => "Choose a Destination:") %>
+			</div>
 		</div>
 
 		<div class="field">
