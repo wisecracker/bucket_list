@@ -30,6 +30,7 @@ group :test do
 	gem 'pry'
 end
 
+gem 'thin'
 gem 'jquery-rails'
 gem 'geocoder'
 

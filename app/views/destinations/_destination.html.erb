@@ -4,3 +4,10 @@
 	<%= image_tag destination.photo_url, :width => 200 %>
 </div>
 
+<div class="todo-items">
+	<% destination.todo_items.each do |todo_item| %>
+		<%= render :partial => 'todo_items/todo_item', :locals => {:todo_item => todo_item } %>
+	<% end %>
+<div>
+
+

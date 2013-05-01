@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.todo_items {
+	border: 2px solid red;
+}
+
 .list_of_todo_items {
 	clear: both;
 }
@@ -33,7 +37,7 @@
 }
 
 .completed {
-	background-color: green;
+	background-color: rgb(157, 184, 157);
 }
 
 #map-canvas {

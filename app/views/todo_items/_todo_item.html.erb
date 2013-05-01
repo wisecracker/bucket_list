@@ -1,4 +1,4 @@
-<div class="todo-item <% todo_item.completed? ? 'completed' : '' %> ">
+<div class="todo-item <%= todo_item.completed? ? 'completed' : '' %> ">
 
 	<%= link_to todo_item.name, todo_item %>
 		<br>
