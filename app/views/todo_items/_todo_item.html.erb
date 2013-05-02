@@ -1,14 +1,23 @@
 <div class="todo-item <%= todo_item.completed? ? 'completed' : '' %> ">
 
 	<%= link_to todo_item.name, todo_item %>
-		<br>
-			Destination: <%= todo_item.destination.name %>
-		<br>
-			Location: <%= todo_item.location %>
-		<br>
-			<%= todo_item.completed ? 'You did it' : 'Still got time for this one' %>
-		<br>
-		Longitude: <%= todo_item.longitude %>
-		Latitude: <%= todo_item.latitude %>
+	<br>
+		Destination: <%= todo_item.destination.name %>
+	<br>
+		Location: <%= todo_item.location %>
+	<br>
+		<%= todo_item.completed ? 'You did it' : 'Still got time for this one' %>
+	<br>
+	Longitude: <%= todo_item.longitude %>
+	Latitude: <%= todo_item.latitude %>
+
+	<div class="comments" todo-id="<%= todo_item.id %>">
+		Comments:
+		<% todo_item.comments.each do |comment| %>
+			<%= render comment %>
+		<% end %>
+	</div>
+
+<%= render :partial => 'comments/form', :locals =>  { :todo_item => todo_item } %>
 </div>
 

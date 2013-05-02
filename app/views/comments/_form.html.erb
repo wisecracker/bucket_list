@@ -1,6 +1,4 @@
-<div class="new-comment">
-
-	
+<div class="new-comment" todo-id="<%= todo_item.id %>">
 
 	<%= form_for Comment.new(:todo_item_id => todo_item.id), :remote => true do |f| %>
 	New Comment:
@@ -8,7 +6,7 @@
 	<%= f.hidden_field :todo_item_id %>
 
 	<div class="field">
-		<%= f.text_area :body %>
+		<%= f.text_area :body, :size => ("20x8") %>
 	</div>
 
 	<div class="field">

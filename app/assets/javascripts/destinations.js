@@ -24,7 +24,7 @@ function showByDestination(id) {
 			var i = this.dataset.itemId
 			
 			if (i==id){			
-					this.style.display = "inherit";
+				this.style.display = "inherit";
 			}	
 			else{
 				this.style.display = "none";
