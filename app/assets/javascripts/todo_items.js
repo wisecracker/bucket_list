@@ -8,5 +8,14 @@ $(document).ready(function() {
 		$('.todo_items').append(data);
 
 	  });
+
+
+	$('.toggle-comments-trigger').click(function(){
+		$(this).next().slideToggle('slow');
+
+	});
+
+
 });
+
 

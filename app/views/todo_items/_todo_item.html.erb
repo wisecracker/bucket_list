@@ -11,13 +11,16 @@
 	Longitude: <%= todo_item.longitude %>
 	Latitude: <%= todo_item.latitude %>
 
-	<div class="comments" todo-id="<%= todo_item.id %>">
-		Comments:
-		<% todo_item.comments.each do |comment| %>
-			<%= render comment %>
-		<% end %>
-	</div>
+	<br>
+	<span class="toggle-comments-trigger">Add <%= (" / See #{todo_item.comments.count} " ) if todo_item.comments.count > 0 %>comments:</span>
+		<span class="toggled-hidden">
+			<div class="comments" todo-id="<%= todo_item.id %>">
+				<% todo_item.comments.each do |comment| %>
+					<%= render comment %>
+				<% end %>
+			</div>
+			<%= render :partial => 'comments/form', :locals =>  { :todo_item => todo_item } %>
+		</span>
+	
 
-<%= render :partial => 'comments/form', :locals =>  { :todo_item => todo_item } %>
 </div>
-

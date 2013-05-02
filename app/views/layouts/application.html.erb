@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 
 <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=??????????&sensor=false">
+      src="https://maps.googleapis.com/maps/api/js?key=?????&sensor=false">
 </script>
 
 <script>
@@ -19,6 +19,9 @@
 	<% end %>
 
 	});
+
+	// puts all the todo items in a json containing array of objects
+	var current_todo_items = <%= raw(TodoItem.all.to_json) %>; 
 </script>
 
 

@@ -21,3 +21,18 @@
 .hide-me {
 	display: none;
 }
+
+.search-box {
+	background-color: rgb(188, 174, 206);
+	border-radius: 5px;
+	text-align: center;
+	width: 300px;
+	height: 70px;
+	float: left;
+	border: 2px solid #d3ccbc;
+}
+
+#todo-search {
+	width: 200px;
+}
+

@@ -13,6 +13,7 @@ $(document).ready(function() {
 				var dLng = this.attributes.longitude.value
 				recenterMap(dLat, dLng);
 				destinationSelectCorrect(destinationId);
+				searchSelectCorrect(destinationId);
 				};				
 	});
 
@@ -44,5 +45,9 @@ function removeDestinationBackgrounds() {
 // makes the destination selection show the current selected destination
 function destinationSelectCorrect(id) {
 	$('#todo_item_destination_id').val(id);
-};	
+};
+
+function searchSelectCorrect(id) {
+	$('#search-select').val(id);
+};		
 
