@@ -10,7 +10,7 @@ $(document).ready(function() {
     //get the value of the selector = destination_id (0 = all)
     var destId = $('#search-select').val();
    
-   	//gets all the <a>'s containing a todo_item title
+   	//gets all the <a>'s containing a todo_item name
     var titlesA = $('.hide-me').children().find('a');
 
     _.each(titlesA, function(x) {

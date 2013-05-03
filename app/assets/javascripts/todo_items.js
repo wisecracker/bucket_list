@@ -9,13 +9,13 @@ $(document).ready(function() {
 
 	  });
 
-
-	$('.toggle-comments-trigger').click(function(){
-		$(this).next().slideToggle('slow');
-
-	});
-
+	toggleComments();	
 
 });
 
+function toggleComments() {
+	$('.toggle-comments-trigger').click(function(){
+		$(this).next().slideToggle('slow');
+	});
+};
 

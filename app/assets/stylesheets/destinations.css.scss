@@ -26,13 +26,34 @@
 	background-color: rgb(188, 174, 206);
 	border-radius: 5px;
 	text-align: center;
-	width: 300px;
+	width: 270px;
 	height: 70px;
 	float: left;
 	border: 2px solid #d3ccbc;
 }
 
+.sort-selector-box {
+	background-color: #bcaece;;
+	border-radius: 5px;
+	text-align: center;
+	width: 165px;
+	height: 70px;
+	float: left;
+	border: 2px solid #d3ccbc;
+	margin-left: 5px;
+}
+
 #todo-search {
 	width: 200px;
+}
+
+.todo-menu {
+	width: 450px;
+	background-color: rgb(93, 103, 111);
+	float: left;
+	padding: 5px;
+	border-radius: 5px;
+	margin: 5px;
+	border: 2px solid #d3ccbc;
 }
 

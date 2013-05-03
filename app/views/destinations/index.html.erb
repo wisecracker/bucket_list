@@ -15,24 +15,40 @@
 	<% end %> 
 </div>
 
+
+
+<div class="todo-menu">
+
+	<div class="search-box">
+		Search for todo items:
+		<br>
+			in:
+			<select id="search-select">
+				<option value="0">All</option>
+				<% Destination.all.each do |d| %>
+					<option value="<%= d.id %>"><%= d.name %></option>
+				<% end %>
+			</select>
+		<br>
+		<input id="todo-search" type="text" placeholder="type your search here...">
+	</div>
+
+	<div class="sort-selector-box">
+		Sort by:
+		<br>
+		<select id="sort-select">
+				<option value="0">None</option>
+				<option value="1">Name(Ascending)</option>
+				<option value="2">Name(Decending)</option>				
+		</select>
+
+	</div>
+
+</div>
+
 <div>
 	<%= render :partial => 'todo_items/form' %>
 </div>
-
-<div class="search-box">
-	Search for todo items:
-	<br>
-		in:
-		<select id="search-select">
-			<option value="0">All</option>
-			<% Destination.all.each do |d| %>
-				<option value="<%= d.id %>"><%= d.name %></option>
-			<% end %>
-		</select>
-	<br>
-	<input id="todo-search" type="text" placeholder="type your search here...">
-</div>
-
 
 <div class="todo_items">
 	<% @destinations.each do |destination| %>
