@@ -3,6 +3,9 @@ class TodoItem < ActiveRecord::Base
 
   has_many :comments
   belongs_to :destination
+  belongs_to :user
+  has_many :likes
+
 
   validates :location, :destination_id, :presence => true
   
