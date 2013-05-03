@@ -12,6 +12,9 @@
 	Latitude: <%= todo_item.latitude %>
 
 	<br>
+	<%= link_to image_tag('thumb.png'), like_todo_item_path(todo_item.id), :remote => true, :method => 'POST' %>
+	<br>
+
 	<span class="toggle-comments-trigger">Add <%= (" / See #{todo_item.comments.count} " ) if todo_item.comments.count > 0 %>comments:</span>
 		<span class="toggled-hidden">
 			<div class="comments" todo-id="<%= todo_item.id %>">
