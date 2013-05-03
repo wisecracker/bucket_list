@@ -19,7 +19,6 @@ class TodoItemsController < ApplicationController
 	def like
 		Like.create(:user_id => session[:user_id], :todo_item_id => params[:id])
 		render :nothing => true
-		binding.pry
 	end
 
 end

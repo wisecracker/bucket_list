@@ -12,6 +12,7 @@
 	Latitude: <%= todo_item.latitude %>
 
 	<br>
+	Liked <%= todo_item.likes.length %> times
 	<%= link_to image_tag('thumb.png'), like_todo_item_path(todo_item.id), :remote => true, :method => 'POST' %>
 	<br>
 
