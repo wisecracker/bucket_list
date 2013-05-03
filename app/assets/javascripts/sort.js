@@ -54,17 +54,6 @@ function sortTodoItems(selection) {
 		return titlesA ;
 };
 
-    
-
-    // var arr = [];
-
-    // do each on titelsA and push arrays with id
-
-	// _.pairs({one: 1, two: 2, three: 3});
-	// 	=> [["one", 1], ["two", 2], ["three", 3]]
-
- 
-
 
 
 
