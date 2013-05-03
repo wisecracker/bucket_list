@@ -4,6 +4,12 @@
 </div>
 
 <div class="destinations">
+	<div class="destination" data-item-id="all" latitude="37.941047" longitude="15.932173">
+		All around the world
+		<br>
+		<%= image_tag "globe.png", :width => 160 %>
+	</div>
+
 	<% @destinations.each do |destination| %>
 		<%= render destination %>
 	<% end %> 

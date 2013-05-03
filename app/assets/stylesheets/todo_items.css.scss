@@ -15,7 +15,7 @@
 .todo-item {
 	border: 2px solid rgb(211, 204, 188);
 	margin: 5px;
-	width: 200px;
+	width: 450px;
 	padding: 5px;
 	background-color: rgb(235, 227, 227);
 	border-radius: 5px;
@@ -29,14 +29,18 @@
 }
 
 .new-todo-item {
+	border: 2px solid rgb(211, 204, 188);
 	background-color: rgb(189, 211, 189);
 	display: block;
+	text-align: center;
 	width: 400px;
 	left: auto;
 	right: auto;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 5px;
 	float: left;
+	border-radius: 5px;
 }
 
 .completed {

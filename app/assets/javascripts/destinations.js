@@ -1,23 +1,34 @@
 $(document).ready(function() {
 
 	
-	// sets each destination to be clickable
+	// sets each destination to be clickable and show onle todo_items belonging to it:
 	$('.destinations').children().each( function() {
 
 			this.onclick = function() {
 				removeDestinationBackgrounds(); 
 				this.style.backgroundColor = '#b1c0cf';
+				
 				var destinationId = this.dataset.itemId
-				showByDestination(destinationId);
+				if (destinationId == "all") {
+					showAll();
+				}
+				else {
+					showByDestination(destinationId);
+				};				
+
 				var dLat = this.attributes.latitude.value
 				var dLng = this.attributes.longitude.value
 				recenterMap(dLat, dLng);
 				destinationSelectCorrect(destinationId);
 				searchSelectCorrect(destinationId);
-				};				
+			};				
 	});
 
 });
+
+function setActiveDestination() {
+
+};
 
 // when a destination is clicked, unhides all it's todo itmes
 function showByDestination(id) {		
@@ -33,7 +44,11 @@ function showByDestination(id) {
 	});	
 };
 
-
+function showAll() {	
+	$('[class=hide-me]').each(function() {
+		this.style.display = "inherit";
+	});
+};
 
 //clears the backgound of all destinations
 function removeDestinationBackgrounds() {
